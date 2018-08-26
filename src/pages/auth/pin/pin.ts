@@ -1,20 +1,18 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { PinPage } from '../pin/pin';
-
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html'
+  selector: 'page-pin',
+  templateUrl: 'pin.html'
 })
-export class LoginPage {
+export class PinPage {
 
   constructor(public navCtrl: NavController) {
 
   }
 
-  login(){
-      this.navCtrl.push(PinPage)
+  pin(){
+      alert('insert pin');
   }
 
 }

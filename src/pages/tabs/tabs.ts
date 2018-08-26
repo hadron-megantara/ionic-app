@@ -10,10 +10,10 @@ import { LoginPage } from '../auth/login/login';
 })
 export class TabsPage {
 
-  tab1Root = HomePage;
+  tab1Root = LoginPage;
   tab2Root = AboutPage;
   tab3Root = ContactPage;
-  tab4Root = LoginPage;
+  tab4Root = HomePage;
 
   constructor() {
 

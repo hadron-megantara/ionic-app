@@ -1,25 +1,17 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Login
+      PIN
     </ion-title>
   </ion-navbar>
 </ion-header>
-
-<!-- <ion-content class="logo">
-    <img src="../../assets/imgs/logo.png" height="70" alt="couldn't load">
-</ion-content> -->
-
 <ion-content padding>
   <form #loginForm="ngForm" (ngSubmit)="login()" autocomplete="off">
     <ion-row>
       <ion-col>
         <ion-list inset>
           <ion-item>
-            <ion-input placeholder="Email" name="username" id="loginField" type="text" required [(ngModel)]="username" #email></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-input placeholder="Password" name="password" id="passwordField" type="password" required [(ngModel)]="password"></ion-input>
+            <ion-input placeholder="PIN" name="pin" id="pinField" type="text" required [(ngModel)]="pintext" #pin></ion-input>
           </ion-item>
         </ion-list>
       </ion-col>
