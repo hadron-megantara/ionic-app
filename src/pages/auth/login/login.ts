@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { FormControl } from '@angular/forms'
+import { AlertController, NavController, FormControl, FormGroup, Validators } from 'ionic-angular';
 
 import { PinPage } from '../pin/pin';
 
@@ -9,12 +10,23 @@ import { PinPage } from '../pin/pin';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public alertCtrl: AlertController) {
 
   }
 
-  login(){
-      this.navCtrl.push(PinPage)
+  async login(fc : FromControl){
+      const alert = await this.alertCtrl.create({
+          header: 'Error',
+          subHeader: 'Subtitle',
+          message: 'Email / Password salah',
+          buttons: ['OK']
+      });
+
+      await alert.present();
+
+      console.log(fc.value);
+
+      // this.navCtrl.push(PinPage);
   }
 
 }
